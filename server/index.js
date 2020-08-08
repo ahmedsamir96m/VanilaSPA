@@ -19,7 +19,7 @@ app.get("/", (req, res) =>
 
 app.post("/video-request", async (req, res, next) => {
   const response = await VideoRequestData.createRequest(req.body);
-  res.redirect("http://127.0.0.1:5500/");
+  res.send(response);
   next();
 });
 
